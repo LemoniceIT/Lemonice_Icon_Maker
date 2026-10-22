@@ -4,10 +4,10 @@ A Python desktop application that converts standard image formats (PNG, JPG, JPE
 
 ## Screenshots
 
-![Main Interface](docs/gui_1.png)
+![Main Interface](asset/ss/gui_1.png)
 *Application interface on launch.*
 
-![Conversion Process](docs/gui_2.png)
+![Conversion Process](asset/ss/gui_2.png)
 *Real-time terminal log displaying image processing and file output.*
 
 ## Features
@@ -70,11 +70,11 @@ Lemonice_Icon_Maker/
 ├── .gitignore
 ├── LICENSE              # License file
 ├── README.md
-├── asset/               # Application assets and icon
-│   └── ico.ico
-├── docs/                # Documentation screenshots
-│   ├── gui_1.png
-│   └── gui_2.png
+├── asset/               # Application assets
+│   ├── ico.ico          # Window icon
+│   └── ss/              # Screenshots
+│       ├── gui_1.png
+│       └── gui_2.png
 └── icon_maker/          # Core module source code
     ├── __init__.py
     ├── config.py
