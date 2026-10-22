@@ -10,6 +10,20 @@ A Python desktop application that converts standard image formats (PNG, JPG, JPE
 ![Conversion Process](asset/ss/gui_2.png)
 *Real-time terminal log displaying image processing and file output.*
 
+## Versioning
+
+This project uses [Semantic Versioning](https://semver.org/). The version is defined in the `VERSION` file and read by the application at runtime.
+
+Current version: **1.0.0**
+
+| Major | Minor | Patch |
+|-------|-------|-------|
+| Breaking changes | New features (backward compatible) | Bug fixes (backward compatible) |
+
+To release a new version:
+1. Update the `VERSION` file (e.g., `1.1.0`)
+2. Tag the commit: `git tag v<version> && git push origin --tags`
+
 ## Features
 
 - **Format Support**: Accepts source images in PNG, JPG, JPEG, BMP, TIFF, and WEBP formats.
@@ -70,6 +84,7 @@ Lemonice_Icon_Maker/
 ├── .gitignore
 ├── LICENSE              # License file
 ├── README.md
+├── VERSION              # Application version (SemVer)
 ├── asset/               # Application assets
 │   ├── ico.ico          # Window icon
 │   └── ss/              # Screenshots

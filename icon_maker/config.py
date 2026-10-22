@@ -8,7 +8,12 @@ from pathlib import Path
 # Application Metadata
 APP_NAME: str = "Lemonice Icon Maker"
 APP_DISPLAY_TITLE: str = "Lemonice Icon Maker — Image to ICO Converter"
+
+# Read version from VERSION file
 APP_VERSION: str = "1.0.0"
+_version_path = Path(__file__).resolve().parent.parent / "VERSION"
+if _version_path.exists():
+    APP_VERSION = _version_path.read_text().strip()
 
 # Application Directories and Paths
 ASSETS_DIR: Path = Path(__file__).resolve().parent.parent / "asset"
