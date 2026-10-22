@@ -1,18 +1,22 @@
 # Lemonice Icon Maker
 
-A Python desktop application that converts images (PNG, JPG, JPEG, BMP, TIFF, WEBP) into multi-resolution `.ico` files for Windows icons. Built with CustomTkinter with a Cyberpunk/Matrix dark theme.
-
-## Features
-
-- **Image Selection**: Choose source images in PNG, JPG, JPEG, BMP, TIFF, and WEBP formats
-- **Multi-Resolution Output**: Select which icon sizes to include (16x16, 32x32, 48x48, 64x64, 128x128, 256x256)
-- **Customizable Output**: Choose output filename and directory with `.ico` extension by default
-- **Conversion Log**: Real-time log terminal panel showing all actions and conversion progress
-- **Cyberpunk GUI**: 800x600 dark-themed interface with green accents
+A Python desktop application that converts standard image formats (PNG, JPG, JPEG, BMP, TIFF, WEBP) into multi-resolution `.ico` files for Windows applications and web development. Built with CustomTkinter featuring a dark high-contrast interface.
 
 ## Screenshots
 
-![Interface preview](docs/screenshot.png)
+![Main Interface](docs/gui_1.png)
+*Application interface on launch.*
+
+![Conversion Process](docs/gui_2.png)
+*Real-time terminal log displaying image processing and file output.*
+
+## Features
+
+- **Format Support**: Accepts source images in PNG, JPG, JPEG, BMP, TIFF, and WEBP formats.
+- **Multi-Resolution Packaging**: Generates multi-layer `.ico` files with user-selected dimensions (16x16, 32x32, 48x48, 64x64, 128x128, 256x256).
+- **Custom Destination**: Configurable output file naming and directory target.
+- **Embedded Logging Console**: Integrated terminal panel tracking application events, path resolution, and conversion status in real time.
+- **Offline Processing**: Operates entirely locally without external dependencies or network communication.
 
 ## Requirements
 
@@ -22,64 +26,66 @@ A Python desktop application that converts images (PNG, JPG, JPEG, BMP, TIFF, WE
 
 ## Installation
 
+Clone the repository and install the required dependencies:
+
 ```bash
+git clone https://github.com/LemoniceIT/Lemonice_Icon_Maker.git
+cd Lemonice_Icon_Maker
 pip install -r requirements.txt
 ```
 
 ## Usage
 
-```bash
-python main.py
-```
-
-### Steps
-
-1. Click **"Select Image"** to choose a source image
-2. (Optional) Uncheck any icon sizes you don't want
-3. Click **"Save As..."** to choose output location (defaults to `.ico`)
-4. Click **"Convert"** to generate the multi-resolution ICO file
-5. Check the terminal log for conversion progress
-
-## Building from Source
-
-### Standalone Executable (.exe)
-
-A pre-compiled Windows executable is available in the [`dist/`](dist/) directory. No Python installation required.
+Start the application using:
 
 ```bash
 python main.py
 ```
 
-### Creating Your Own .exe
+### Execution Steps
 
-Using PyInstaller:
+1. Click **Select Image** to choose a source file.
+2. Select or deselect target icon resolutions as needed.
+3. Click **Save As...** to set the output destination path.
+4. Click **Convert** to build the multi-resolution `.ico` file.
+5. Monitor completion details via the terminal log panel.
+
+## Building Executables
+
+To build a standalone Windows executable (`.exe`) without requiring a system Python environment:
 
 ```bash
 pip install pyinstaller
 pyinstaller --onefile --windowed main.py
 ```
 
+The compiled binary will be placed in the `dist/` directory.
+
 ## Project Structure
 
 ```
-icon_maker/
+Lemonice_Icon_Maker/
 ├── main.py              # Application entry point
-├── requirements.txt     # Python dependencies
+├── requirements.txt     # Python dependency list
 ├── .gitignore
+├── LICENSE              # License file
 ├── README.md
-├── asset/
+├── asset/               # Application assets and icon
 │   └── ico.ico
-└── icon_maker/
+├── docs/                # Documentation screenshots
+│   ├── gui_1.png
+│   └── gui_2.png
+└── icon_maker/          # Core module source code
     ├── __init__.py
     ├── config.py
     └── gui.py
 ```
 
-## Credits
+## License & Credits
 
-Developed by Stefano D'Angelo
+Developed by Stefano D'Angelo. See the `LICENSE` file for full license information.
 
-### Libraries and Licenses
+### Dependencies and Licenses
 
 - **Python 3.11+** — [PSF License](https://docs.python.org/3/license.html)
 - **CustomTkinter** — [Creative Commons Zero v1.0 Universal](https://github.com/TomSchimansky/CustomTkinter)
